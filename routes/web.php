@@ -45,4 +45,14 @@ Route::prefix('admin')->middleware(['auth'])->group(function () {
     Route::get('news/edit/{news_id}','NewsController@edit');
     Route::post('news/update/{news_id}','NewsController@update');
     Route::get('news/destroy/{news_id}','NewsController@destroy');
+
+    //後台產品管理
+    Route::get('product','productController@index');
+    Route::get('product/create','productController@create');
+    Route::post('product/store','productController@store');
+    Route::get('product/edit/{product_id}','productController@edit');
+    Route::post('product/update/{product_id}','productController@update');
+    Route::get('product/destroy/{product_id}','productController@destroy');
 });
+
+
